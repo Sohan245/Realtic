@@ -1,4 +1,4 @@
-lineartrails
+Linear Trails
 ============
 
 Tool to automatically search for linear characteristics. There exists a research
@@ -7,11 +7,6 @@ Applications to CAESAR Candidates", which is presented at AsiaCrypt 2015, an
 online version is available [here](https://eprint.iacr.org/2015/1200). If you
 use this tool in your work, it would be nice to cite the research paper.
 
-Authors
--------
-- Christoph Dobraunig (<christoph.dobraunig@iaik.tugraz.at>)
-- Maria Eichlseder (<maria.eichlseder@iaik.tugraz.at>)
-- Florian Mendel (<florian.mendel@iaik.tugraz.at>)
 
 Build
 -----
@@ -146,15 +141,4 @@ low hamming weight.
 `active_weight` determines the probability that an active S-box will be guessed
 (higher values mean higher chance). `inactive_weight` does the same for inactive
 S-boxes.
-
-The code snippets describing the behavior of the linear and S-box layer of the
-implemented ciphers are taken from their reference implementations, which are
-available at <http://bench.cr.yp.to/ebash.html>.
-
-The tool is tested under
-- Xubuntu 14.04 (64 bit) using gcc version 4.8.2
-- Xubuntu 14.10 (64 bit) using gcc version 4.9.1
-- Xubuntu 14.10 (64 bit) using clang (3.8 trunk, Revision 254516)
-- Ubuntu 15.04 (64 bit) using gcc version 4.9.2
-- OSX Yosemite using Apple LLVM version 6.0
 
