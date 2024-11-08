@@ -1,16 +1,7 @@
 # sha1collisiondetection
 Library and command line tool to detect SHA-1 collisions in files
 
-Copyright 2017 Marc Stevens <marc@marc-stevens.nl>
-
 Distributed under the MIT Software License.
-
-See accompanying file LICENSE.txt or copy at https://opensource.org/licenses/MIT.
-
-## Developers
-
-- Marc Stevens, CWI Amsterdam (https://marc-stevens.nl)
-- Dan Shumow, Microsoft Research (https://www.microsoft.com/en-us/research/people/danshu/)
 
 ## About
 This library and command line tool were designed as near drop-in replacements for common SHA-1 libraries and sha1sum.
@@ -25,7 +16,6 @@ More specifically they will detect any cryptanalytic collision attack against SH
 ```
 The possibility of false positives can be neglected as the probability is smaller than 2^-90.
 
-The library supports both an indicator flag that applications can check and act on, as well as a special _safe-hash_ mode that returns the real SHA-1 hash when no collision was detected and a different _safe_ hash when a collision was detected.
 Colliding files will have the same SHA-1 hash, but will have different unpredictable safe-hashes.
 This essentially enables protection of applications against SHA-1 collisions with no further changes in the application, e.g., digital signature forgeries based on SHA-1 collisions automatically become invalid.
 
@@ -39,20 +29,6 @@ https://marc-stevens.nl/research/papers/C13-S.pdf
 Run:
 ```
 make
-```
-
-## Command-line usage
-
-There are two programs `bin/sha1dcsum` and `bin/sha1dcsum_partialcoll`.
-The first program `bin/sha1dcsum` will detect and warn for files that were generated with a cryptanalytic SHA-1 collision attack,
-like the one documented at https://shattered.io/ as well as the later derived attack https://sha-mbles.github.io/.
-The second program `bin/sha1dcsum_partialcoll` will detect and warn for files that were generated with a cryptanalytic collision attack against reduced-round SHA-1 (of which there are a few examples so far).
-
-Examples:
-```
-bin/sha1dcsum test/sha1_reducedsha_coll.bin test/shattered-1.pdf
-bin/sha1dcsum_partialcoll test/sha1reducedsha_coll.bin test/shattered-1.pdf
-pipe_data | bin/sha1dcsum -
 ```
 
 ## Library usage
@@ -128,9 +104,7 @@ modifying the code yourself.
 
 This code will try to auto-detect certain things based on
 CPU/platform. Unless you're running on some really obscure CPU or
-porting to a new platform you should not need to tweak this. If you do
-please open an issue at
-https://github.com/cr-marcstevens/sha1collisiondetection
+porting to a new platform you should not need to tweak this.
 
 - SHA1DC_FORCE_LITTLEENDIAN / SHA1DC_FORCE_BIGENDIAN
 
