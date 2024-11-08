@@ -1,18 +1,9 @@
 # PersichettiOTScryptanalysis
 Cryptanalysis of Persichetti's One-Time Signature (OTS) from quasi-cyclic codes
 
-This repository hosts the implementation of the cryptanalysis of the OTS proposed by Persichetti in [ePrint 2017/397](https://eprint.iacr.org/2017/397). Full details are available in [ePrint 2018/1205](https://eprint.iacr.org/2018/1205).
-
 ## Compilation
 
 This piece of software should compile on Linux systems using the traditional `make` command. It will produce an executable file `breakOTS`.
-
-## Usage
-
-To run this piece of software, use:
-```
-./breakOTS p w1 w2 delta relax sigFile threshold maxBFround
-```
 
 Where the parameters should be:
 1. `p` the length of the code,
@@ -50,7 +41,3 @@ We provide 4 samples of signature files, one for each set of parameters (see Tab
 
 `samples/set-i.txt` contains a one-time signature using parameters of the *i*-th line of Tab. 2. For instance, in `sample/set-2.txt`, we have p=9857.
 
-
-## Reporting bugs, comments
-
-Please feel free to report any problem encountered by mail (jean-christophe[dot]deneuville[at]insa-cvl[dot]fr) or using the issues feature.
